@@ -13,15 +13,3 @@ public class PromptGenerator
     }
 
 }
-
-
-            // write and read into journal files
-
-            // responsibilites :
-            // write
-            // display (DateOnly + journal)
-            // iterate
-
-            // variables :
-            // userInput
-            // UserList (public List<Job>_jobs = new List<Job>();

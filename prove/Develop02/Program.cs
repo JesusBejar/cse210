@@ -31,39 +31,47 @@ public class main
         // random prompt to the user 
         int randomNum = random.Next(0, _promptReference._questionPrompts.Count);
         _promptReference.randomNum = randomNum;
+        
+        bool _continueJournal = true;
 
-        Console.WriteLine ("Please select one of the following choices");
-        Console.WriteLine ("1) Write");
-        Console.WriteLine ("2) Display");
-        Console.WriteLine ("3) Load");
-        Console.WriteLine ("4) Save");
-        Console.WriteLine ("5) Quit");
-        Console.WriteLine("What would you like to do? ");
-        int _userInput = int.Parse(Console.ReadLine());
+        while (_continueJournal == true) {
 
-        switch(_userInput) 
-        {
-        case 1:
-            // Write
-            _promptReference.DisplayPrompt();
+            Console.WriteLine ("Please select one of the following choices");
+            Console.WriteLine ("1) Write");
+            Console.WriteLine ("2) Display");
+            Console.WriteLine ("3) Load");
+            Console.WriteLine ("4) Save");
+            Console.WriteLine ("5) Quit");
+            Console.WriteLine("What would you like to do? ");
+            int _userInput = int.Parse(Console.ReadLine());
 
-            Console.Write(">");
+            switch(_userInput) 
+            {
+            case 1:
+                // Write
+                _promptReference.DisplayPrompt();
 
-            _promptReference._journalPrompt = Console.ReadLine();
-            
-            break;
-        case 2:
-            // Display
-            break;
-        case 3:
-            // Save
-            break;
-        case 4:
-            // Load
-            break;
-        case 5:
-            // Quit
-            break;
+                Console.Write(">");
+
+                _promptReference._journalPrompt = Console.ReadLine();
+                
+                break;
+            case 2:
+                // Display
+                break;
+            case 3:
+                // Save
+                break;
+            case 4:
+                // Load
+                break;
+            case 5:
+                // Quit
+                    Console.WriteLine("See you soon!");
+                    _continueJournal = false;
+                break;
+            }
+
         }
 
     }
