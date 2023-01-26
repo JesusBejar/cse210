@@ -17,27 +17,6 @@ class Program
         job1._startYear = 2025;
         job1._endYear = 2030;
 
-        // the line below "calls" and prints all job details -
-        // company, title, start year, end year
-        job1.DisplayDetails();
-
-        // the line below "calls" and prints out
-        // whatever is saved to the _company member variable
-        // The Church of Jesus Christ
-        // Console.WriteLine (job1._company);
-        // Console.WriteLine(job1._company2);
-        // Console.WriteLine(job1._title);
-
-        // can arrays be "called" and referenced??
-        // Console.WriteLine(job1._companies);
-
-        // the lines below print out the same
-        // results as job1.DisplayDetails();
-        // Job job2 = new Job();
-        // job2.DisplayDetails();
-        // Job job3 = new Job();
-        // job3.DisplayDetails();
-
         // another instance
         Job job2 = new Job();
 
@@ -60,3 +39,24 @@ class Program
 
     }
 }
+// NOTES
+        // the line below "calls" and prints out
+        // whatever is saved to the _company member variable
+        // The Church of Jesus Christ
+        // Console.WriteLine (job1._company);
+        // Console.WriteLine(job1._company2);
+        // Console.WriteLine(job1._title);
+
+        // can arrays be "called" and referenced??
+        // Console.WriteLine(job1._companies);
+
+        // the lines below print out the same
+        // results as job1.DisplayDetails();
+        // Job job2 = new Job();
+        // job2.DisplayDetails();
+        // Job job3 = new Job();
+        // job3.DisplayDetails();
+        // the line below "calls" and prints all job details -
+        // company, title, start year, end year
+        // job1.DisplayDetails();
+
