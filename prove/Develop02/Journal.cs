@@ -1,32 +1,28 @@
 public class Journal
 {
-   public List<string>_entries = new List<string>();
-    public void SaveEntry (string functionString) {
+    public string _journalEntry;
 
-        _entries.Add(functionString);
+    public string _date;
+
+    public string _fileName;
+    
+    // below is the list that stores entries that the user
+    // types in response to a random prompt
+   public List<string>_currentEntries = new List<string>();
+    public void DisplayCurrentEntries (string userstring) {
+
+        _currentEntries.Add(userstring);
+
+        foreach (string entry in _currentEntries) {
+
+                Console.WriteLine(entry);
+
+        }
+
+    
     }
+    
+
 }
-
-            // prompt and display
-            // responsibilites :
-            // prompt
-            // 1.2.3.4.5. menu
-
-            // variables :
-            // Write 
-            // Display 
-            // Load 
-            // Save 
-            // Quit 
-
-            // private static bool MainMenu() 
-            // { Console.Clear(); 
-            // Console.WriteLine("Choose an option:"); 
-            // Console.WriteLine("1) Reverse String"); 
-            // Console.WriteLine("2) Remove Whitespace"); 
-            // Console.WriteLine("3) Exit"); 
-            // Console.Write("\r\nSelect an option: "); 
-            // switch (Console.ReadLine()) { case "1": ReverseString(); 
-            // return true; case "2": RemoveWhitespace(); 
-            // return true; 
-            // case "3": return false; default: return true; } }
+ 
+    

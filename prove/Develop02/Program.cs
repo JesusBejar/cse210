@@ -12,6 +12,11 @@ public class main
         PromptGenerator _promptReference = new PromptGenerator();
 
         Random random = new Random();
+
+        File _fileReference = new File();
+
+        StreamReader sr = new StreamReader("file.txt");
+
         // below are the list of opening prompts that will 
         // be displayed when the user chooses option 1
 
@@ -19,23 +24,29 @@ public class main
         // they will be chosen at random and displayed to the user
         // with the help of the DisplayPrompt() method within the
         // StuffDisplayed class within the DisplayJournal file
+        
         _promptReference._questionPrompts.Add("Who was the most interesting person I interacted with today?");
         _promptReference._questionPrompts.Add("What was the best part of my day?");
         _promptReference._questionPrompts.Add("Who are you more like, your mom or your dad?");
         _promptReference._questionPrompts.Add("What is your greatest joy");
         _promptReference._questionPrompts.Add("What is your greatest fear?");
-        _promptReference._questionPrompts.Add("Why did you choose to study promming if it is so frustrating at times?");
+        _promptReference._questionPrompts.Add("Why did you choose to study programming if it is so frustrating at times?");
 
         // below are the necessary references and variables to 
         // make a random number that will be used to display a 
         // random prompt to the user 
         int randomNum = random.Next(0, _promptReference._questionPrompts.Count);
         _promptReference.randomNum = randomNum;
+
+        _journalReference._date = DateTime.Now.ToString("dddd, dd MMMM yyyy");
+
         
-        bool _continueJournal = true;
+            bool _continueJournal = true;
 
-        while (_continueJournal == true) {
+            while (_continueJournal == true) 
 
+            {
+            
             Console.WriteLine ("Please select one of the following choices");
             Console.WriteLine ("1) Write");
             Console.WriteLine ("2) Display");
@@ -45,7 +56,7 @@ public class main
             Console.WriteLine("What would you like to do? ");
             int _userInput = int.Parse(Console.ReadLine());
 
-            switch(_userInput) 
+                switch(_userInput) 
             {
             case 1:
                 // Write
@@ -53,17 +64,28 @@ public class main
 
                 Console.Write(">");
 
-                _promptReference._journalPrompt = Console.ReadLine();
+                _journalReference._journalEntry = Console.ReadLine();
                 
                 break;
             case 2:
                 // Display
+                Console.WriteLine($"Date - {_journalReference._date}"); 
+
+                Console.WriteLine("Prompt - " ); _promptReference.DisplayPrompt();
+
+                Console.WriteLine ("Answer -"); _journalReference.DisplayCurrentEntries(_journalReference._journalEntry);
+                
                 break;
             case 3:
                 // Save
+                _fileReference.enterFileNombre();
+                _fileReference.SaveToAFile(_journalReference._fileName);
+
                 break;
             case 4:
                 // Load
+                _fileReference.LoadFile("file.txt");
+                
                 break;
             case 5:
                 // Quit

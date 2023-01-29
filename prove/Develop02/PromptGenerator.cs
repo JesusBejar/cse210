@@ -1,6 +1,6 @@
 public class PromptGenerator
 {   
-    public string _journalPrompt ;
+    // public string _journalPrompt ;
 
     public string _currentDate;
 
