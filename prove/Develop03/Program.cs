@@ -9,5 +9,6 @@ class Program
         List list = new List();
 
         scr.DisplayScripture();
+        inter.Decide();
     }
 }
