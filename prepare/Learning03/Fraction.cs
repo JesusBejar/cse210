@@ -1,6 +1,9 @@
 using System;
 
-class Fraction
+class Fraction  
+
+    // this class contains all attributes and methods within this single class
+
 {
    private int _top;
    private int _bottom;
