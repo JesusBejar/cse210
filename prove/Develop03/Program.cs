@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        Scripture scr = new Scripture();
+        Interactor inter = new Interactor();
+        List list = new List();
+
+        scr.DisplayScripture();
     }
 }

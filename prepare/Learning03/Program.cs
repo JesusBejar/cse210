@@ -2,11 +2,15 @@ using System;
 
 class Program
 {
+    // This program contains no member attributes (variables) or methods (functions)
+    // they can only be accessed through a class
     static void Main(string[] args)
     {
         Fraction f1 = new Fraction();
         Console.WriteLine(f1.GetFractionString());
         Console.WriteLine(f1.GetDecimalValue());
+        // ESCRI.mostrarEscritura();
+        // LIST(ESCRI.mostratEscristura());
 
         Fraction f2 = new Fraction(5);
         Console.WriteLine(f2.GetFractionString());
