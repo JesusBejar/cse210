@@ -17,6 +17,7 @@ class Program
             if(_list[i].Contains("for"))
                 _list[index] = "___";
         }
+
         // if(_list[i].Contains("for"))
         //     _list[index] = "___";
         // 

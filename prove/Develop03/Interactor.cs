@@ -8,16 +8,19 @@ using System.Text;
 
 class Interactor
 {
-    private string _userInput;
 
-    public void Decide() {
+    List list = new List();
+    Scripture scr = new Scripture();
+
+  public void Decide() {
         Console.WriteLine("Press enter to continue or type 'quit' to finish");
         if (Console.ReadKey().Key == ConsoleKey.Enter) {
-            System.Environment.Exit(0);  
+            Console.WriteLine("enter was pressed");
+            list.SplitScripture(scr.GetandSetScripture);
         }
         else {
             // List.SplitSentence();
-            Console.WriteLine("enter was pressed");
+            System.Environment.Exit(0);  
         }
         }
 }

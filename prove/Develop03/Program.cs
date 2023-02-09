@@ -10,5 +10,6 @@ class Program
 
         scr.DisplayScripture();
         inter.Decide();
+
     }
 }
