@@ -13,14 +13,18 @@ class Interactor
     Scripture scr = new Scripture();
 
   public void Decide() {
+    for (int i=0;i<36;i++) 
+    {
         Console.WriteLine("Press enter to continue or type 'quit' to finish");
-        if (Console.ReadKey().Key == ConsoleKey.Enter) {
-            Console.WriteLine("enter was pressed");
-            list.SplitScripture(scr.GetandSetScripture);
-        }
-        else {
+        string _userInput = Console.ReadLine();
+        if (_userInput == "quit") {
             // List.SplitSentence();
             System.Environment.Exit(0);  
         }
-        }
+        else if (_userInput != "quit") {
+            // Console.ReadKey().Key == ConsoleKey.Enter
+            list.SplitScripture(scr.GetandSetScripture);
+        }    
+    }
+    }
 }
