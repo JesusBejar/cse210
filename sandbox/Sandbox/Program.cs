@@ -6,18 +6,46 @@ class Program
 
         static void Main(string[] args) 
         {
-        Random random = new Random();
-        
-        List <string> _list = new List<string>{ "for","this", "is","my", "work", "and", "my", "glory"};
-        int wordCount = _list.Count();
-    // Console.WriteLine(wordCount);
-        int index = random.Next(_list.Count);
-        for(int i=0;i<_list.Count;i++)
-        {
-            if(_list[i].Contains("for"))
-                _list[index] = "___";
-        }
+            // a regular class called Person
 
+    // the student instance automatically has the GetName() method!
+        Student student = new Student();
+        string name = student.GetName();
+        Console.WriteLine(name);
+        Random random = new Random();
+
+      }
+
+      public class Person
+    {
+        public string GetName()
+        {
+            return "Joseph";
+        }
+    }
+
+        // a class that inherits from Person
+        // the Person class is the parent class while Student is the child
+    public class Student : Person
+    {
+        public string GetNumber()
+        {
+            return "0123456789";
+        }
+    }
+   }
+
+
+//    BELOW WAS PRACTICE CODE FOR THE SCRIPTURE MEMORIZER PROJECT FEB 13 2023
+//          List <string> _list = new List<string>{ "for","this", "is","my", "work", "and", "my", "glory"};
+//         int wordCount = _list.Count();
+//     // Console.WriteLine(wordCount);
+//         int index = random.Next(_list.Count);
+//         for(int i=0;i<_list.Count;i++)
+//         {
+//             if(_list[i].Contains("for"))
+//                 _list[index] = "___";
+//         }
         // if(_list[i].Contains("for"))
         //     _list[index] = "___";
         // 
@@ -30,8 +58,6 @@ class Program
         //  list[index] = "___";
         //  Console.WriteLine(list);
 
-      }
-   }
 
 //    BELOW IS CODE I REFERENCED FOR THE SCRIPTURE MEMORIZER ACTIVITY
     // {
