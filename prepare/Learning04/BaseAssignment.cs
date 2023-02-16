@@ -1,8 +1,6 @@
-using System;
-
 public class BaseAssignment
 {
-        private string _studentName ;
+        protected string _studentName ;
         private string _topic ;
         public string GetName() {
             return _studentName;
