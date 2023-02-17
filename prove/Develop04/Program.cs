@@ -4,22 +4,37 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        string _userMenuChoice ;
 
-        BaseActivity A1 = new BaseActivity("this is a message", "this is a prompt");
+        Console.WriteLine("Menu Options");
+        Console.WriteLine("1.Breathing Activity");
+        Console.WriteLine("2.Reflecting Activity");
+        Console.WriteLine("3.Listing Activity");
+        Console.WriteLine("4.Quit");
+        Console.WriteLine("Please select a choice from the menu: ");
 
-        Console.WriteLine(A1.DisplayPrompt());
+        _userMenuChoice = Console.ReadLine();
 
-        BreathingActivity A2 = new BreathingActivity("Breathing Activity", "this is a prompt");
+        if (_userMenuChoice == "1") {
+            BreathingActivity A2 = new BreathingActivity("Breathing Activity", "this is a prompt");
 
-        Console.WriteLine(A2.DisplayPrompt());
+            Console.WriteLine(A2.DisplayPrompt());
+        }
+        
+        else if (_userMenuChoice == "2") {
+            ReflectingActivity A3 = new ReflectingActivity("Reflecting Activity", "this is a prompt");
 
-        ReflectingActivity A3 = new ReflectingActivity("Reflecting Activity", "this is a prompt");
-
-        Console.WriteLine(A3.DisplayPrompt());
-
-        ListingActivity A4 = new ListingActivity("Listing Activity", "this is a prompt");
+            Console.WriteLine(A3.DisplayPrompt());
+        }
+        else if (_userMenuChoice == "3") {
+            ListingActivity A4 = new ListingActivity("Listing Activity", "this is a prompt");
 
         Console.WriteLine(A4.DisplayPrompt());
+        }
+        else 
+        {
+            System.Environment.Exit(0); 
+        }
+
     }
 }
