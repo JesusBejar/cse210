@@ -21,6 +21,8 @@ class Program
             Console.WriteLine(A2.DisplayPrompt());
 
             A2.DotTimer();
+
+            A2.Breathe(A2.GetSec());
         }
         
         else if (_userMenuChoice == "2") {
