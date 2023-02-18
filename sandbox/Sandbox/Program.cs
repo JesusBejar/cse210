@@ -3,17 +3,26 @@ using System.Collections.Generic;
 
 class Program
 {          
-
-        static void Main(string[] args) 
+    static void Main(string[] args) 
+    {
+        for (int a = 10; a >= 0; a--)
         {
-        Console.WriteLine("Going to sleep for a second...");
+            Console.Write("\rBreathe in...{0:00}", a);
+            System.Threading.Thread.Sleep(1000);
+        } 
 
-        Thread.Sleep(3000);
-
-        Console.WriteLine("I'm back!!");
+    }
  
-   }
+   
 }
+    // BELOW IS CODE TO MAKE A PAUSE FOR THE MINDFULLNESS ASSIGNMENT
+    // {
+    // Console.WriteLine("Going to sleep for a second...");
+
+    // Thread.Sleep(3000);
+
+    // Console.WriteLine("I'm back!!");
+    
 
     // BELOW WAS PRACTICE FROM INHERITANCE PREP ACTIVITY FEB 18 2023
     // a regular class called Person
