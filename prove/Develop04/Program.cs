@@ -19,17 +19,23 @@ class Program
             BreathingActivity A2 = new BreathingActivity("Breathing Activity", "this is a prompt");
 
             Console.WriteLine(A2.DisplayPrompt());
+
+            A2.DotTimer();
         }
         
         else if (_userMenuChoice == "2") {
             ReflectingActivity A3 = new ReflectingActivity("Reflecting Activity", "this is a prompt");
 
             Console.WriteLine(A3.DisplayPrompt());
+
+            A3.DotTimer();
         }
         else if (_userMenuChoice == "3") {
             ListingActivity A4 = new ListingActivity("Listing Activity", "this is a prompt");
 
-        Console.WriteLine(A4.DisplayPrompt());
+            Console.WriteLine(A4.DisplayPrompt());
+
+            A4.DotTimer();
         }
         else 
         {

@@ -6,34 +6,43 @@ class Program
 
         static void Main(string[] args) 
         {
-            // a regular class called Person
+        Console.WriteLine("Going to sleep for a second...");
+
+        Thread.Sleep(3000);
+
+        Console.WriteLine("I'm back!!");
+ 
+   }
+}
+
+    // BELOW WAS PRACTICE FROM INHERITANCE PREP ACTIVITY FEB 18 2023
+    // a regular class called Person
 
     // the student instance automatically has the GetName() method!
-        Student student = new Student();
-        string name = student.GetName();
-        Console.WriteLine(name);
-        Random random = new Random();
+    //     Student student = new Student();
+    //     string name = student.GetName();
+    //     Console.WriteLine(name);
+    //     Random random = new Random();
 
-      }
+    //   }
 
-      public class Person
-    {
-        public string GetName()
-        {
-            return "Joseph";
-        }
-    }
+    //   public class Person
+    // {
+    //     public string GetName()
+    //     {
+    //         return "Joseph";
+    //     }
+    // }
 
-        // a class that inherits from Person
-        // the Person class is the parent class while Student is the child
-    public class Student : Person
-    {
-        public string GetNumber()
-        {
-            return "0123456789";
-        }
-    }
-   }
+    //     // a class that inherits from Person
+    //     // the Person class is the parent class while Student is the child
+    // public class Student : Person
+    // {
+    //     public string GetNumber()
+    //     {
+    //         return "0123456789";
+    //     }
+    // }
 
 
 //    BELOW WAS PRACTICE CODE FOR THE SCRIPTURE MEMORIZER PROJECT FEB 13 2023
