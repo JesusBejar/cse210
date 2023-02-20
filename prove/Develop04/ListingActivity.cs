@@ -1,6 +1,6 @@
 public class ListingActivity : BaseActivity
 {
-    public ListingActivity(string openingPrompt, string startingMessage) : base (openingPrompt, startingMessage) 
+    public ListingActivity(string openingPrompt, string startingMessage, string closingMessage) : base (openingPrompt, startingMessage, closingMessage) 
     {
 
     }

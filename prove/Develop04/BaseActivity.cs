@@ -1,11 +1,13 @@
 public class BaseActivity
 {
-    protected string _startingMessage ;
+    protected string _activity ;
     protected string _openingPrompt ;
     private string _userSecStr ;
-    public BaseActivity (string startingMessage, string openingPrompt) {
-        _startingMessage = startingMessage;
+    protected string _closingMessage ;
+    public BaseActivity (string activity, string openingPrompt, string closingMessage) {
+        _activity = activity;
         _openingPrompt = openingPrompt;
+        _closingMessage = closingMessage;
     }
     public int GetSec() 
     {
@@ -18,8 +20,11 @@ public class BaseActivity
         return _userSecInt;
     }
 
-    public string DisplayPrompt() {
-        return $"{_startingMessage}\n{_openingPrompt}\n";
+    public string DisplayOpening() {
+        return $"Welcome to the {_activity}\n{_openingPrompt}\n";
+    }
+    public string DisplayClosing() {
+        return $"{_closingMessage}{_activity}";
     }
 
     public void DotTimer()

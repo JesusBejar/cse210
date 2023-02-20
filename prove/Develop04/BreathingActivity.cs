@@ -1,6 +1,6 @@
 public class BreathingActivity : BaseActivity
 {
-    public BreathingActivity (string openingPrompt, string startingMessage) : base (openingPrompt, startingMessage) 
+    public BreathingActivity (string openingPrompt, string startingMessage, string closingMessage) : base (openingPrompt, startingMessage, closingMessage) 
     {
         
     }
