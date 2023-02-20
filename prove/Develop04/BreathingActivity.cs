@@ -8,6 +8,7 @@ public class BreathingActivity : BaseActivity
     public void Breathe(int sec) {
         Console.Write("Get ready");
         DotTimer();
+        // will not function correctly with floats
         while (sec / 10 != _counter) {
             for (int a = 5; a >= 0; a--)
         {
@@ -23,6 +24,7 @@ public class BreathingActivity : BaseActivity
         } 
         _counter += 1;
         }
+        Console.WriteLine($"\nYou have completed {sec} seconds of the {_activity}");
 
     }
 }
