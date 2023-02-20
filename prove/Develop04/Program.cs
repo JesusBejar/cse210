@@ -21,8 +21,6 @@ class Program
 
             Console.WriteLine(A1.DisplayOpening());
 
-            A1.DotTimer();
-
             A1.Breathe(A1.GetSec());
 
             Console.Write(A1.DisplayClosing());

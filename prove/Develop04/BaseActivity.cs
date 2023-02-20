@@ -24,7 +24,7 @@ public class BaseActivity
         return $"Welcome to the {_activity}\n{_openingPrompt}\n";
     }
     public string DisplayClosing() {
-        return $"{_closingMessage}{_activity}";
+        return $"\n{_closingMessage}{_activity}";
     }
 
     public void DotTimer()
