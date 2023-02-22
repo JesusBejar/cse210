@@ -4,6 +4,8 @@ public class BaseActivity
     protected string _openingPrompt ;
     private string _userSecStr ;
     protected string _closingMessage ;
+    protected string _randomPrompt ;
+    
     public BaseActivity (string activity, string openingPrompt, string closingMessage) {
         _activity = activity;
         _openingPrompt = openingPrompt;

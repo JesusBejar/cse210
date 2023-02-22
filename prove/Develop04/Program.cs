@@ -33,6 +33,8 @@ class Program
 
             A2.DotTimer();
 
+            A2.Reflect(A2.PopulateAndSelect());
+
             Console.WriteLine(A2.DisplayClosing());
         }
         else if (_userInt == 3) {
