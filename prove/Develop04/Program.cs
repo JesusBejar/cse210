@@ -31,9 +31,9 @@ class Program
 
             Console.WriteLine(A2.DisplayOpening());
 
-            A2.DotTimer();
+            A2.GetSec();
 
-            A2.Reflect(A2.PopulateAndSelect());
+            A2.Reflect(A2.PopulateAndSelectPromptList(), A2.PopulateAndSelectQuestionList(), A2.GetSec());
 
             Console.WriteLine(A2.DisplayClosing());
         }

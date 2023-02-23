@@ -27,7 +27,7 @@ public class ReflectingActivity : BaseActivity
         return _randomQuestion;
     }
 
-    public void Reflect(string randomPrompt, string randomQuestion) {
+    public void Reflect(string randomPrompt, string randomQuestion, int sec) {
         Console.Write("\nGet ready");
         DotTimer();
         Console.WriteLine("\nConsider the following prompt: ");
@@ -46,5 +46,6 @@ public class ReflectingActivity : BaseActivity
             Console.WriteLine($"\n{_randomQuestion}");
             DotTimer();
         }
+        Console.WriteLine($"\nYou have completed {sec} seconds of the {_activity}");
     }
 }
