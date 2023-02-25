@@ -29,13 +29,13 @@ public class ReflectingActivity : BaseActivity
     }
     public string Random() {
         do {
-            var random = new Random();
-            _index = random.Next(_randomQuestions.Count);
+            var _random = new Random();
+            _index = _random.Next(_randomQuestions.Count);
         }while(_selectedQuestions.Contains(_index));
             _selectedQuestions.Add(_index);
             return _selectedQuestion = _randomQuestions[_index];
     }
-    public void Reflect(string randomPrompt, List<string> randomQuestions, int sec) {
+    public void Reflect(string randomPrompt, List<string> randomQuestions, int _sec) {
         // _randomQuestion = _randomQuestions[index].ToString();
         PopulateQuestionList();
         Console.Write("\nGet ready");
@@ -44,13 +44,13 @@ public class ReflectingActivity : BaseActivity
         Console.WriteLine($"\n---{_randomPrompt}---");
         Console.WriteLine("\nWhen you have something in mind, press enter to continue");
         string _userInput = Console.ReadLine();
-        DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(sec);
+        DateTime _startTime = DateTime.Now;
+        DateTime _endTime = _startTime.AddSeconds(_sec);
         if (_userInput != "word") {
             Console.WriteLine("Now ponder on each of the following question as they related to this experience.");
-            for (int a = 5; a >= 0; a--)
+            for (int _a = 5; _a >= 0; _a--)
             {
-                Console.Write("\rYou may begin in: {0:00}", a);
+                Console.Write("\rYou may begin in: {0:00}", _a);
                 System.Threading.Thread.Sleep(1000);
             }
             do {
@@ -58,10 +58,10 @@ public class ReflectingActivity : BaseActivity
                 Console.WriteLine(SelectRandomQuestion());
                 DotTimer();
                 _counter +=1;
-            }while (DateTime.Now < endTime);
+            }while (DateTime.Now < _endTime);
             
         }
         Console.WriteLine("Well done!");
-        Console.WriteLine($"\nYou have completed {sec} seconds of the {_activity}");
+        Console.WriteLine($"\nYou have completed {_sec} seconds of the {_activity}");
     }
 }

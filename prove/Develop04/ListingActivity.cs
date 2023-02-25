@@ -4,28 +4,28 @@ public class ListingActivity : BaseActivity
     {
 
     }
-    public void List (string randomPrompt, int sec) {
+    public void List (string randomPrompt, int _sec) {
         Console.WriteLine("List as many responses as you can to the following prompt");
         Console.WriteLine($"\n ---{_randomPrompt}---");
-        for (int a = 5; a >= 0; a--)
+        for (int _a = 5; _a >= 0; _a--)
             {
-                Console.Write("\rYou may begin in: {0:00}", a);
+                Console.Write("\rYou may begin in: {0:00}", _a);
                 System.Threading.Thread.Sleep(1000);
             }
 
-        DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(sec);
+        DateTime _startTime = DateTime.Now;
+        DateTime _endTime = _startTime.AddSeconds(_sec);
         Console.Write("\n");
         do {
         Console.Write(">");
         _userStr = Console.ReadLine();
         _counter +=1;
         }
-        while (DateTime.Now < endTime);
+        while (DateTime.Now < _endTime);
 
         Console.WriteLine($"You listed {_counter} items!");
 
         Console.WriteLine("Well done!");
-        Console.WriteLine($"\nYou have completed {sec} seconds of the {_activity}");
+        Console.WriteLine($"\nYou have completed {_sec} seconds of the {_activity}");
     }
 }

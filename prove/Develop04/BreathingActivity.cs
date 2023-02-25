@@ -4,13 +4,13 @@ public class BreathingActivity : BaseActivity
     {
         
     }
-    public void Breathe(int sec) {
+    public void Breathe(int _sec) {
         Console.Write("Get ready");
         DotTimer();
         // will not function correctly with floats
-        DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(sec);
-        while (DateTime.Now < endTime) {
+        DateTime _startTime = DateTime.Now;
+        DateTime _endTime = _startTime.AddSeconds(_sec);
+        while (DateTime.Now < _endTime) {
         for (int a = 5; a >= 0; a--)
         {
             Console.Write("\rBreathe in...{0:00}", a);
@@ -26,7 +26,7 @@ public class BreathingActivity : BaseActivity
         _counter += 1;
         }
         Console.WriteLine("Well done!");
-        Console.WriteLine($"\nYou have completed {sec} seconds of the {_activity}");
+        Console.WriteLine($"\nYou have completed {_sec} seconds of the {_activity}");
 
     }
 }
