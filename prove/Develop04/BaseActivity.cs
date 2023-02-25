@@ -66,4 +66,13 @@ public class BaseActivity
             _randomPrompt = _randomPrompts[index1].ToString();
             return _randomPrompt;
         }
+    public string Begin() {
+    for (int _a = 5; _a >= 0; _a--)
+        {
+            Console.Write("\rYou may begin in: {0:00}", _a);
+            System.Threading.Thread.Sleep(1000);
+        }
+    return "";
     }
+}
+    

@@ -7,11 +7,8 @@ public class ListingActivity : BaseActivity
     public void List (string randomPrompt, int _sec) {
         Console.WriteLine("List as many responses as you can to the following prompt");
         Console.WriteLine($"\n ---{_randomPrompt}---");
-        for (int _a = 5; _a >= 0; _a--)
-            {
-                Console.Write("\rYou may begin in: {0:00}", _a);
-                System.Threading.Thread.Sleep(1000);
-            }
+
+        Begin();
 
         DateTime _startTime = DateTime.Now;
         DateTime _endTime = _startTime.AddSeconds(_sec);

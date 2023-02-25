@@ -48,11 +48,7 @@ public class ReflectingActivity : BaseActivity
         DateTime _endTime = _startTime.AddSeconds(_sec);
         if (_userInput != "word") {
             Console.WriteLine("Now ponder on each of the following question as they related to this experience.");
-            for (int _a = 5; _a >= 0; _a--)
-            {
-                Console.Write("\rYou may begin in: {0:00}", _a);
-                System.Threading.Thread.Sleep(1000);
-            }
+            Begin();
             do {
                 Console.WriteLine("\n");
                 Console.WriteLine(SelectRandomQuestion());

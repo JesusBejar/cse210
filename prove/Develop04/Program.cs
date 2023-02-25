@@ -39,6 +39,7 @@ class Program
 
             Console.WriteLine(A2.DisplayClosing());
         }
+
         else if (_userInt == 3) {
             ListingActivity A3 = new ListingActivity("Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area. :)", "Thank you for participating in the ");
 
@@ -53,6 +54,7 @@ class Program
 
             A3.DotTimer();
         }
+        
         else 
         {
             System.Environment.Exit(0); 
