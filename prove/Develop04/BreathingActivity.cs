@@ -7,6 +7,7 @@ public class BreathingActivity : BaseActivity
     public void Breathe(int _sec) {
         Console.Write("Get ready");
         DotTimer();
+        Console.Clear();
         // will not function correctly with floats
         DateTime _startTime = DateTime.Now;
         DateTime _endTime = _startTime.AddSeconds(_sec);

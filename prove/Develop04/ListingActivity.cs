@@ -5,6 +5,9 @@ public class ListingActivity : BaseActivity
 
     }
     public void List (string randomPrompt, int _sec) {
+        Console.Clear();
+        Console.Write("\nGet ready");
+        DotTimer();
         Console.WriteLine("List as many responses as you can to the following prompt");
         Console.WriteLine($"\n ---{_randomPrompt}---");
 

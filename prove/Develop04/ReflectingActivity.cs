@@ -38,6 +38,7 @@ public class ReflectingActivity : BaseActivity
     public void Reflect(string randomPrompt, List<string> randomQuestions, int _sec) {
         // _randomQuestion = _randomQuestions[index].ToString();
         PopulateQuestionList();
+        Console.Clear();
         Console.Write("\nGet ready");
         DotTimer();
         Console.WriteLine("\nConsider the following prompt: ");
@@ -47,6 +48,7 @@ public class ReflectingActivity : BaseActivity
         DateTime _startTime = DateTime.Now;
         DateTime _endTime = _startTime.AddSeconds(_sec);
         if (_userInput != "word") {
+            Console.Clear();
             Console.WriteLine("Now ponder on each of the following question as they related to this experience.");
             Begin();
             do {
