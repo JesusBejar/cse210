@@ -9,10 +9,12 @@ public class ReflectingActivity : BaseActivity
     private string _selectedQuestion ;
     private int _index ;
     public List<string> PopulateQuestionList() {
-        _randomQuestions.Add("What answer did you give?");
-        _randomQuestions.Add("How do your answer make you feel?");
+        _randomQuestions.Add("What was your answer?");
+        _randomQuestions.Add("How does your answer make you feel?");
+        _randomQuestions.Add("Do you feel your answer was positive or negative? Why?");
         _randomQuestions.Add("Based on your answer, what do you think you should change in your life?");
         _randomQuestions.Add("What did you like or dislike about your answer?");
+        _randomQuestions.Add("What did you learn from your answer?");
         // move index code snippet into reflect(); function - Bryce 
         // use List<str> name.contains() to filter through a list and check if random question is within list - Abraham
         return _randomQuestions;
