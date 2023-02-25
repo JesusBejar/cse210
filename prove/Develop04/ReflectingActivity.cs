@@ -4,30 +4,38 @@ public class ReflectingActivity : BaseActivity
     {
 
     }
-    private List<string> _randomPrompts = new List<string>();   
     private List<string> _randomQuestions = new List<string>();
-        public string PopulateAndSelectPromptList() {
-        var random = new Random();
-        _randomPrompts.Add("Think of your closest people you trust.");
-        _randomPrompts.Add("Describe a place where you felt happiest.");
-        _randomPrompts.Add("Think of your favorite scripture.");
-        _randomPrompts.Add("Describe yourself in a few words.");
-        int index1 = random.Next(_randomPrompts.Count);
-        _randomPrompt = _randomPrompts[index1].ToString();
-        return _randomPrompt;
-    }
-    public string PopulateAndSelectQuestionList() {
-        var random = new Random();
+    private List<int> _selectedQuestions = new List<int>();
+    private string _selectedQuestion ;
+    private int _index ;
+    public List<string> PopulateQuestionList() {
         _randomQuestions.Add("What answer did you give?");
         _randomQuestions.Add("How do your answer make you feel?");
         _randomQuestions.Add("Based on your answer, what do you think you should change in your life?");
         _randomQuestions.Add("What did you like or dislike about your answer?");
-        int index2 = random.Next(_randomQuestions.Count);
-        _randomQuestion = _randomQuestions[index2].ToString();
-        return _randomQuestion;
+        // move index code snippet into reflect(); function - Bryce 
+        // use List<str> name.contains() to filter through a list and check if random question is within list - Abraham
+        return _randomQuestions;
     }
-
-    public void Reflect(string randomPrompt, string randomQuestion, int sec) {
+    private string SelectRandomQuestion() {
+        if (_selectedQuestions.Count != _randomQuestions.Count) {
+            return Random();
+        } else {
+            _selectedQuestions.Clear();
+            return Random();
+        }
+    }
+    public string Random() {
+        do {
+            var random = new Random();
+            _index = random.Next(_randomQuestions.Count);
+        }while(_selectedQuestions.Contains(_index));
+            _selectedQuestions.Add(_index);
+            return _selectedQuestion = _randomQuestions[_index];
+    }
+    public void Reflect(string randomPrompt, List<string> randomQuestions, int sec) {
+        // _randomQuestion = _randomQuestions[index].ToString();
+        PopulateQuestionList();
         Console.Write("\nGet ready");
         DotTimer();
         Console.WriteLine("\nConsider the following prompt: ");
@@ -41,10 +49,13 @@ public class ReflectingActivity : BaseActivity
                 Console.Write("\rYou may begin in: {0:00}", a);
                 System.Threading.Thread.Sleep(1000);
             }
-            Console.WriteLine($"\n{_randomQuestion}");
-            DotTimer();
-            Console.WriteLine($"\n{_randomQuestion}");
-            DotTimer();
+            do {
+                Console.WriteLine("\n");
+                Console.WriteLine(SelectRandomQuestion());
+                DotTimer();
+                _counter +=1;
+            }while (sec / 10 != _counter);
+            
         }
         Console.WriteLine($"\nYou have completed {sec} seconds of the {_activity}");
     }
