@@ -8,8 +8,10 @@ public class BreathingActivity : BaseActivity
         Console.Write("Get ready");
         DotTimer();
         // will not function correctly with floats
-        while (sec / 10 != _counter) {
-            for (int a = 5; a >= 0; a--)
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(sec);
+        while (DateTime.Now < endTime) {
+        for (int a = 5; a >= 0; a--)
         {
             Console.Write("\rBreathe in...{0:00}", a);
             System.Threading.Thread.Sleep(1000);

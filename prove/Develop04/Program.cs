@@ -23,6 +23,8 @@ class Program
 
             A1.Breathe(A1.GetSec());
 
+            A1.DotTimer();
+
             Console.Write(A1.DisplayClosing());
         }
         
