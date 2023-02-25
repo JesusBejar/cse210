@@ -42,6 +42,8 @@ public class ReflectingActivity : BaseActivity
         Console.WriteLine($"\n---{_randomPrompt}---");
         Console.WriteLine("\nWhen you have something in mind, press enter to continue");
         string _userInput = Console.ReadLine();
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(sec);
         if (_userInput != "word") {
             Console.WriteLine("Now ponder on each of the following question as they related to this experience.");
             for (int a = 5; a >= 0; a--)
@@ -54,7 +56,7 @@ public class ReflectingActivity : BaseActivity
                 Console.WriteLine(SelectRandomQuestion());
                 DotTimer();
                 _counter +=1;
-            }while (sec / 10 != _counter);
+            }while (DateTime.Now < endTime);
             
         }
         Console.WriteLine($"\nYou have completed {sec} seconds of the {_activity}");

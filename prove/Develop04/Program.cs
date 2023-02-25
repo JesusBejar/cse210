@@ -35,6 +35,8 @@ class Program
 
             A2.Reflect(A2.PopulateAndSelectPromptList(), A2.PopulateQuestionList(), A2.GetSec());
 
+            A2.DotTimer();
+
             Console.WriteLine(A2.DisplayClosing());
         }
         else if (_userInt == 3) {
