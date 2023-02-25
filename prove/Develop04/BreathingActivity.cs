@@ -25,6 +25,7 @@ public class BreathingActivity : BaseActivity
         } 
         _counter += 1;
         }
+        Console.WriteLine("Well done!");
         Console.WriteLine($"\nYou have completed {sec} seconds of the {_activity}");
 
     }

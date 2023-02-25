@@ -2,7 +2,8 @@ public class BaseActivity
 {
     protected string _activity ;
     protected string _openingPrompt ;
-    private string _userSecStr ;
+    protected string _userStr ;
+    protected int _userSecInt ;
     protected string _closingMessage ;
     protected string _randomPrompt ;
     protected string _randomQuestion;
@@ -18,9 +19,9 @@ public class BaseActivity
     {
         Console.WriteLine("How long, in seconds, would you like for your session? ");
 
-        _userSecStr = Console.ReadLine();
+        _userStr = Console.ReadLine();
 
-        int _userSecInt = Int32.Parse(_userSecStr);
+        int _userSecInt = Int32.Parse(_userStr);
 
         return _userSecInt;
     }

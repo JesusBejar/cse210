@@ -25,6 +25,7 @@ public class ListingActivity : BaseActivity
 
         Console.WriteLine($"You listed {_counter} items!");
 
+        Console.WriteLine("Well done!");
         Console.WriteLine($"\nYou have completed {sec} seconds of the {_activity}");
     }
 }

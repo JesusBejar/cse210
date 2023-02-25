@@ -59,6 +59,7 @@ public class ReflectingActivity : BaseActivity
             }while (DateTime.Now < endTime);
             
         }
+        Console.WriteLine("Well done!");
         Console.WriteLine($"\nYou have completed {sec} seconds of the {_activity}");
     }
 }
