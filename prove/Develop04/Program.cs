@@ -40,14 +40,14 @@ class Program
 
             Console.WriteLine(A3.DisplayOpening());
 
-            A3.GetSec();
-
             // fix pathway so that I can use Populate and Select Prompt List
             A3.List(A3.PopulateAndSelectPromptList(), A3.GetSec());
 
             A3.DotTimer();
 
             Console.WriteLine(A3.DisplayClosing());
+
+            A3.DotTimer();
         }
         else 
         {
