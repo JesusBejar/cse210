@@ -31,9 +31,7 @@ class Program
 
             Console.WriteLine(A2.DisplayOpening());
 
-            A2.GetSec();
-
-            A2.Reflect(A2.PopulateAndSelectPromptList(), A2.PopulateAndSelectQuestionList(), A2.GetSec());
+            A2.Reflect(A2.PopulateAndSelectPromptList(), A2.PopulateQuestionList(), A2.GetSec());
 
             Console.WriteLine(A2.DisplayClosing());
         }
@@ -41,6 +39,11 @@ class Program
             ListingActivity A3 = new ListingActivity("Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area. :)", "Thank you for participating in the ");
 
             Console.WriteLine(A3.DisplayOpening());
+
+            A3.GetSec();
+
+            // fix pathway so that I can use Populate and Select Prompt List
+            A3.List(A3.PopulateAndSelectPromptList(), A3.GetSec());
 
             A3.DotTimer();
 

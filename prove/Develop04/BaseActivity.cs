@@ -6,6 +6,8 @@ public class BaseActivity
     protected string _closingMessage ;
     protected string _randomPrompt ;
     protected string _randomQuestion;
+    protected int _counter ;
+    protected List<string> _randomPrompts = new List<string>();   
     
     public BaseActivity (string activity, string openingPrompt, string closingMessage) {
         _activity = activity;
@@ -53,5 +55,14 @@ public class BaseActivity
             }
 
         }
-
-}
+    public string PopulateAndSelectPromptList() {
+            var random = new Random();
+            _randomPrompts.Add("Think of your closest people you trust.");
+            _randomPrompts.Add("Describe a place where you felt happiest.");
+            _randomPrompts.Add("Think of your favorite scripture.");
+            _randomPrompts.Add("Describe yourself in a few words.");
+            int index1 = random.Next(_randomPrompts.Count);
+            _randomPrompt = _randomPrompts[index1].ToString();
+            return _randomPrompt;
+        }
+    }

@@ -1,6 +1,5 @@
 public class BreathingActivity : BaseActivity
 {
-    private int _counter ;
     public BreathingActivity (string openingPrompt, string startingMessage, string closingMessage) : base (openingPrompt, startingMessage, closingMessage) 
     {
         
