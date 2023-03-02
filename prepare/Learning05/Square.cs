@@ -6,7 +6,7 @@ public class Square : Shape
         this._side = side;
     }
 
-    public override float GetArea()
+    public override double GetArea()
     {
         return _side * _side;
     }

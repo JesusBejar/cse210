@@ -12,10 +12,10 @@ public abstract class Shape
         _color = color;
     }
 
-    public Shape (string color, int sides)
+    public Shape (string color)
     {
         this._color = color;
     }
 
-    public abstract float GetArea ();
+    public abstract double GetArea();
 }
