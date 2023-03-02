@@ -5,14 +5,21 @@ class Program
 {          
     static void Main(string[] args) 
     {
-        for (int a = 10; a >= 0; a--)
-        {
-            Console.Write("\rBreathe in...{0:00}", a);
-            System.Threading.Thread.Sleep(1000);
-        } 
+            SBI sbi = new SBI();
+
+            Console.WriteLine(sbi.PopulateQuestionList());
+            // Console.WriteLine(sbi.Random());
+            Console.WriteLine(sbi.SelectRandomQuestion());
+            Console.WriteLine(sbi.SelectRandomQuestion());
+            
 
     }
  
+        // BELOW IS CODE FOR THE MINDFULLNESS PROGRAM
+    //  {
+        //     Console.Write("\rBreathe in...{0:00}", a);
+        //     System.Threading.Thread.Sleep(1000);
+        // } 
    
 }
     // BELOW IS CODE TO MAKE A PAUSE FOR THE MINDFULLNESS ASSIGNMENT
