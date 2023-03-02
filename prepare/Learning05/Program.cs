@@ -9,5 +9,9 @@ class Program
         Square square = new Square("blue", 2);
         Console.WriteLine(square.GetColor());
         Console.WriteLine(square.GetArea());
+
+        Rectangle rectangle = new Rectangle("red", 3, 2);
+        Console.WriteLine(rectangle.GetColor());
+        Console.WriteLine(rectangle.GetArea());
     }
 }
