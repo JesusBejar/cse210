@@ -1,0 +1,4 @@
+class LoadGoal : Goal 
+{
+    
+}
