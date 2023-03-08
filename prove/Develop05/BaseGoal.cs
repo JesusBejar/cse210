@@ -6,9 +6,9 @@ public abstract class BaseGoal
     protected int _goalPoints ;
     protected int _bonusPoints ;
     protected int _counter ;
-    protected List<string> _goals ;
+    // protected List<string> _goals ;
 
-
+    public abstract string SpecificGoalTask();
     public string DisplayLevelUp() 
     {
         if (_goalPoints > 500)  {
@@ -20,19 +20,9 @@ public abstract class BaseGoal
         else if (_goalPoints > 1500)  {
             return"Congrats! You leveled up! \n You current level is 3";
         }  
-        else {}
-    }
-
-    public string CancatenateGoal(string goalName, string goalDescription, int points) 
-    {
-        return $" [ ] {_goalName} {_goalDescription} {_goalPoints}";
-    }
-
-    public void DisplayGoals()
-    {
+        // be sure to change this last else statement
+        else { return "1";} 
 
     }
-    public abstract string CreateGoal();
-    public abstract string MarkComplete();
 
 }

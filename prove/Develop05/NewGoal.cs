@@ -48,4 +48,8 @@ public class NewGoal : BaseGoal
             return $"{_goalName} {_goalDescription} {_goalPoints} {_counter}";
         }
     }
+    public string CancatenateGoal(string _line) 
+    {   
+        return $" [ ] {_goalName} ({_goalDescription}) - {_goalPoints} points, Currently completed: {_counter} time(s)";
+    }
 }
