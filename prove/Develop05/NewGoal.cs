@@ -44,12 +44,15 @@ public class NewGoal : BaseGoal
             Console.WriteLine("How many points do you want to assign to this goal?");
             _goalPoints = Int32.Parse(Console.ReadLine());
             Console.WriteLine("How many times do you have to complete this goal to achieve a bonus?");
-            _counter = Int32.Parse(Console.ReadLine());
-            return $"{_goalName} {_goalDescription} {_goalPoints} {_counter}";
+            _goalCount = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("What is the bonus for accomplishing it that many times?");
+            _bonusPoints = Int32.Parse(Console.ReadLine());
+            return $"{_goalName} {_goalDescription} {_goalPoints} {_goalCount} {_bonusPoints}";
+
         }
     }
     public string CancatenateGoal(string _line) 
     {   
-        return $" [ ] {_goalName} ({_goalDescription}) - {_goalPoints} points, Currently completed: {_counter} time(s)";
+        return $" [ ] {_goalName} ({_goalDescription}) - {_goalPoints} points, Currently completed: {_goalCount} time(s)";
     }
 }
