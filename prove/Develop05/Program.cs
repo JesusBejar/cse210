@@ -36,6 +36,9 @@ class Program
 
             foreach (string g in _goals) 
             {
+                // how do I skip the first item (0)??
+                // also how can a place the numbers & goals side by side?
+                Console.WriteLine(_goals.IndexOf(g));
                 Console.WriteLine(g);
             }
            
