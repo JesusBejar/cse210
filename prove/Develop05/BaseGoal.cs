@@ -1,12 +1,19 @@
 public abstract class BaseGoal 
 {
+    // below is the global varible that represents the user's menu choices
     protected int _userMenuChoice ;
+    // below is the varible that stores the goal name
     protected string _goalName ;
+    // below is the varible that stores the goal description
     protected string _goalDescription ;
+    // below is the varible that stores goal points
     protected int _goalPoints ;
+    // // below is the varible that stores the number of bonus points for option # 1-3
     protected int _bonusPoints ;
-    protected int _counter ;
-    // protected List<string> _goals ;
+    // below is the varible that stores the inicial amount of times a goal must be completed
+    protected int _goalCount ;
+    // below is the varible that stores the amount of times a goal has been completed
+    protected int _repetitions ;
 
     public abstract string SpecificGoalTask();
     public string DisplayLevelUp() 
