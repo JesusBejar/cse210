@@ -1,7 +1,24 @@
 class SaveGoal : BaseGoal 
 {
+    public SaveGoal(List<string> _goals) : base ( _goals)
+    {
+        
+    }
     public override string SpecificGoalTask()
     {
-        return "1";
+        Console.WriteLine("Please enter the name of your file:");
+        string fileName = Console.ReadLine();
+
+        using (StreamWriter outputFile = new StreamWriter(fileName))
+        {
+            outputFile.WriteLine($"Points : {_goalPoints}");
+
+            foreach (string g in _goals) 
+            {
+                outputFile.WriteLine($"{g}");
+            }
+        }
+        Console.Clear();
+        return "1"; 
     }
 }
