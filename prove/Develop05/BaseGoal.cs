@@ -14,7 +14,12 @@ public abstract class BaseGoal
     protected int _goalCount ;
     // below is the varible that stores the amount of times a goal has been completed
     protected int _repetitions ;
-
+    // below is the list of goals made (this will reference the one if program)
+    protected List<string> _goals ;
+    public BaseGoal(List<string> goals)
+    {
+        _goals = goals;
+    }
     public abstract string SpecificGoalTask();
     public string DisplayLevelUp() 
     {

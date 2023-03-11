@@ -1,6 +1,10 @@
 using System;
 public class NewGoal : BaseGoal 
 {
+    public NewGoal(List<string> _goals) : base ( _goals)
+    {
+        
+    }
     public override string SpecificGoalTask()
     {
         Console.WriteLine("The types of goals are: ");
@@ -55,4 +59,10 @@ public class NewGoal : BaseGoal
     {   
         return $" [ ] {_goalName} ({_goalDescription}) - {_goalPoints} points, Currently completed: {_goalCount} time(s)";
     }
+    // public string AddGoalsToList(string goal)
+    // {
+    //     _goals.Add(goal);
+    //     Console.WriteLine(goal);
+    //     return "1";
+    // }
 }
