@@ -18,7 +18,9 @@ class SaveGoal : BaseGoal
                 outputFile.WriteLine($"{g}");
             }
         }
+        _goals.Clear();
+        Console.WriteLine("Goals have been cleared");
         Console.Clear();
-        return "1"; 
+        return ""; 
     }
 }

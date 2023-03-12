@@ -16,6 +16,7 @@ public abstract class BaseGoal
     protected int _repetitions ;
     // below is the list of goals made (this will reference the one if program)
     protected List<string> _goals ;
+    // below is a constructor that passes the _goals list to all classes
     public BaseGoal(List<string> goals)
     {
         _goals = goals;

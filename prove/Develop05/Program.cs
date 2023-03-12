@@ -4,9 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        int _userMenuChoice ;
-
         List<string> _goals = new List<string>();
+
+        int _userMenuChoice ;
 
         // int _points ;
 
@@ -24,32 +24,28 @@ class Program
         Console.WriteLine("Please select a choice from the menu: ");
         _userMenuChoice = Int32.Parse(Console.ReadLine());
         
-        NewGoal ng = new NewGoal();
+        NewGoal ng = new NewGoal(_goals);
+        ListGoal lg = new ListGoal(_goals);
+        SaveGoal sg = new SaveGoal(_goals);
+        LoadGoal llg = new LoadGoal(_goals);
+        Record r = new Record(_goals);
 
         if (_userMenuChoice == 1) {
             
             _goals.Add(ng.CancatenateGoal(ng.SpecificGoalTask()));
-            
         }
         
         else if (_userMenuChoice == 2) {
-
-            foreach (string g in _goals) 
-            {
-                // how do I skip the first item (0)??
-                // also how can a place the numbers & goals side by side?
-                Console.WriteLine(_goals.IndexOf(g));
-                Console.WriteLine(g);
-            }
-           
+           lg.SpecificGoalTask();
         }
 
         else if (_userMenuChoice == 3) {
-            
+
+            sg.SpecificGoalTask();
         }
 
         else if (_userMenuChoice == 4) {
-            
+            llg.SpecificGoalTask();
         }
 
         else if (_userMenuChoice == 5) {

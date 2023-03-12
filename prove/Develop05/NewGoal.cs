@@ -3,7 +3,7 @@ public class NewGoal : BaseGoal
 {
     public NewGoal(List<string> _goals) : base ( _goals)
     {
-        
+
     }
     public override string SpecificGoalTask()
     {
@@ -55,14 +55,9 @@ public class NewGoal : BaseGoal
 
         }
     }
-    public string CancatenateGoal(string _line) 
+    public string CancatenateGoal(string _line)
     {   
         return $" [ ] {_goalName} ({_goalDescription}) - {_goalPoints} points, Currently completed: {_goalCount} time(s)";
     }
-    // public string AddGoalsToList(string goal)
-    // {
-    //     _goals.Add(goal);
-    //     Console.WriteLine(goal);
-    //     return "1";
-    // }
+
 }
