@@ -1,7 +1,17 @@
-class ListGoal : BaseGoal 
+public class ListGoal : BaseGoal 
 {
+    public ListGoal(List<string> _goals) : base ( _goals)
+    {
+        
+    }
     public override string SpecificGoalTask()
     {
-        return "1";
+
+        foreach (string g in _goals) 
+        {
+            Console.Write(_goals.IndexOf(g)+1);
+            Console.WriteLine(g);
+        }
+        return "";
     }
 }
