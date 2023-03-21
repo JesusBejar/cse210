@@ -2,23 +2,28 @@ public class Video
 {
     public string _title ;
     public string _author ;
-    public int _length ;
-    public List<Comment> _comments = new List<Comment>();
+    public string _length ;
+    public int _counter ;
+    // public Video (string title, string author, int length)
+    // {
+    //     _title = title;
+    //     _author = author;
+    //     _length = length;
+    // }
 
-    public Video (string title, string author, int length)
+    public int CommentNumberLength(List<Comment> comments)
     {
-        _title = title;
-        _author = author;
-        _length = length;
-    }
-
-    public int CommentNumberLength()
-    {
-        return 1;
+        foreach (Comment comment in comments)
+        {
+            _counter += 1;
+        }
+        Console.WriteLine($"Number of comments: {_counter}");
+        return _counter;
     }
 
     public string ReturnVideo()
     {
-        return "";
+        Console.WriteLine($"{_title} \n{_author} \n{_length}");
+        return $"{_title} {_author} {_length}";
     }
 }
