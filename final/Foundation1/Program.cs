@@ -21,6 +21,28 @@ class Program
         c1._text = "What a time to be alive. Probably the most excited me and my friends had ever been for a fight, but especially the pre fight trash talk. Iconic.";
         _comments.Add(c1);
 
+        Comment c2 = new Comment();
+        c2._name = "@rawbebaba";
+        c2._text = "I'll always love Nate Diaz man. What a treasure to the sport.";
+        _comments.Add(c2);
+
+        Comment c3 = new Comment();
+        c3._name = "@Henroin42";
+        c3._text = "10:10 connors face is priceless";
+        _comments.Add(c3);
+
+        Video video2 = new Video();
+        video2._title = "\nHow to Add, Remove & Toggle Classes By Using DOM (classlist) property";
+        video2._author = "HuXn WebDev";
+        video2._length = "322 seconds \n";
+        _videoList.Add(video2);
+
+
+        Comment c4 = new Comment();
+        c4._name = "@lightagainst_darkness6697";
+        c4._text = "Thanks man you helped me a lot";
+        _comments.Add(c4);
+
         foreach (Video video in _videoList)
         {
             video.ReturnVideo();
