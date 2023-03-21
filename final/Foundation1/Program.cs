@@ -8,14 +8,18 @@ class Program
 
         List<Comment> _comments = new List<Comment>();
 
+        List<Comment> _comments2 = new List<Comment>();
+
         Console.WriteLine("Hello Foundation1 World!");
 
+        // VIDEO 1
         Video video1 = new Video();
         video1._title = "Nate Diaz vs. Connor McGregor 2016 UFC fight";
         video1._author = "Ultimate Fighting Championship";
         video1._length = "30 seconds\n";
         _videoList.Add(video1);
 
+        // 3 COMMENTS 
         Comment c1 = new Comment();
         c1._name = "@DrBeauHightower";
         c1._text = "What a time to be alive. Probably the most excited me and my friends had ever been for a fight, but especially the pre fight trash talk. Iconic.";
@@ -31,17 +35,28 @@ class Program
         c3._text = "10:10 connors face is priceless";
         _comments.Add(c3);
 
+        // VIDEO 2
         Video video2 = new Video();
         video2._title = "\nHow to Add, Remove & Toggle Classes By Using DOM (classlist) property";
         video2._author = "HuXn WebDev";
         video2._length = "322 seconds \n";
         _videoList.Add(video2);
 
-
+        // 3 COMMENTS 
         Comment c4 = new Comment();
         c4._name = "@lightagainst_darkness6697";
         c4._text = "Thanks man you helped me a lot";
-        _comments.Add(c4);
+        _comments2.Add(c4);
+
+        Comment c5 = new Comment();
+        c4._name = "@losL2r2";
+        c4._text = "Helped me with my issues";
+        _comments2.Add(c5);
+
+        Comment c6 = new Comment();
+        c4._name = "@muhsinkiki4245";
+        c4._text = "Nice";
+        _comments2.Add(c6);
 
         foreach (Video video in _videoList)
         {
@@ -51,6 +66,7 @@ class Program
             {
                 comment.ReturnComment();
             }
+
         }
     }
 }
