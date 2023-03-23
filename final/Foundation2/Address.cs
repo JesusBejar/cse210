@@ -4,13 +4,15 @@ public class Address
     private string _state ;
     private string _country ;
 
-    public Address()
+    public Address(string street, string state, string country)
     {
-
+        _street = street;
+        _state = state;
+        _country = country;
     }
     public string CountryIsUSA()
     {
-        if (_country == "USA" || _country == "United States of America")
+        if (_country == "US" || _country == "USA" || _country == "United States" || _country == "United States of America" )
         {
             return $"USA";
         }
