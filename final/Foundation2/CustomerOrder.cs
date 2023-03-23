@@ -6,6 +6,19 @@ public class CustomerOrder
 
     public CustomerOrder()
     {
-        
+
     }
+    public void CalculateCost()
+    {
+
+    }
+    public void PackingLabel()
+    {
+
+    }
+    public void ShippingLabel()
+    {
+
+    }
+
 }

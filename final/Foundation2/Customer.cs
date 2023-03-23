@@ -5,6 +5,14 @@ public class Customer
 
     public Customer()
     {
-        
+
+    }
+    public bool CountryIsUSA()
+    {
+        return true;
+    }
+    public string ReturnCustomer()
+    {
+        return "";
     }
 }

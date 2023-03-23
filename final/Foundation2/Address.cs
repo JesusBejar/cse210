@@ -6,6 +6,14 @@ public class Address
 
     public Address()
     {
-        
+
+    }
+    public bool CountryIsUSA()
+    {
+        return true;
+    }
+    public string ReturnAddress()
+    {
+        return "";
     }
 }

@@ -7,6 +7,10 @@ public class Product
 
     public Product ()
     {
-        
+
+    }
+    public string ReturnProduct()
+    {
+        return "";
     }
 }
