@@ -1,7 +1,7 @@
 public class Product
 {
     private string _name ;
-    private int _id ;
+    private string _id ;
     private int _quantity ;
     private int _totalPrice ;
 
@@ -11,6 +11,11 @@ public class Product
     }
     public string ReturnProduct()
     {
-        return "";
+        return $"{_name} {_id} {TotalProductPrice()}";
+    }
+
+    public int TotalProductPrice()
+    {
+        return _quantity * _totalPrice;
     }
 }
