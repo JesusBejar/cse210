@@ -6,7 +6,7 @@ public class CustomerOrder
     private Address _address ; 
     public CustomerOrder()
     {
-
+        
     }
     public void CalculateCost()
     {
