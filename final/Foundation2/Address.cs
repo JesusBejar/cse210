@@ -10,10 +10,18 @@ public class Address
     }
     public bool CountryIsUSA()
     {
-        return true;
+        if (_country == "USA" || _country == "United States of America")
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
+
     }
     public string ReturnAddress()
     {
-        return "";
+        return $"{_street} {_state} {_country}";
     }
 }
