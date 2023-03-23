@@ -54,7 +54,26 @@ class Program
         c4._text = "Nice";
         _comments.Add(c6);
 
-        
+        // VIDEO 3
+        Video video3 = new Video();
+        video3._title = "Because of Jesus, You Can Rise Above Anything - Easter 2023 | “Rise”";
+        video3._author = "Church of Jesus Christ | Come Unto Christ";
+        video3._length = "102 seconds \n";
+        _videoList.Add(video3);
+
+        // 3 COMMENTS
+        Comment c7 = new Comment();
+        c7._name = "@peggygallagher@5802";
+        c7._text = "Thank you Lord Jesus for picking me up every time I fall...";
+
+        Comment c8 = new Comment();
+        c8._name = "@trudyappleby1622";
+        c8._text = "This is so beautiful and touching thank you. From the broken pieces in me.";
+
+        Comment c9 = new Comment();
+        c9._name = "@RomonaF1102";
+        c9._text = "This was so moving, thank you for creating such uplifting content that gives such powerful reminders of how Christ can help me.";
+
         foreach (Video video in _videoList)
         {
             // below returns the video name, author and length of time
