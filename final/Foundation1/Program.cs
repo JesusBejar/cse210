@@ -8,15 +8,11 @@ class Program
 
         List<Comment> _comments = new List<Comment>();
 
-        List<Comment> _comments2 = new List<Comment>();
-
-        Console.WriteLine("Hello Foundation1 World!");
-
         // VIDEO 1
         Video video1 = new Video();
         video1._title = "Nate Diaz vs. Connor McGregor 2016 UFC fight";
         video1._author = "Ultimate Fighting Championship";
-        video1._length = "30 seconds\n";
+        video1._length = "840 seconds\n";
         _videoList.Add(video1);
 
         // 3 COMMENTS 
@@ -46,27 +42,36 @@ class Program
         Comment c4 = new Comment();
         c4._name = "@lightagainst_darkness6697";
         c4._text = "Thanks man you helped me a lot";
-        _comments2.Add(c4);
+        _comments.Add(c4);
 
         Comment c5 = new Comment();
         c4._name = "@losL2r2";
         c4._text = "Helped me with my issues";
-        _comments2.Add(c5);
+        _comments.Add(c5);
 
         Comment c6 = new Comment();
         c4._name = "@muhsinkiki4245";
         c4._text = "Nice";
-        _comments2.Add(c6);
+        _comments.Add(c6);
 
+        
         foreach (Video video in _videoList)
         {
+            // below returns the video name, author and length of time
             video.ReturnVideo();
-            video.CommentNumberLength(_comments);
-            foreach (Comment comment in _comments)
-            {
-                comment.ReturnComment();
-            }
 
+            // should return 3 for each video
+            Console.Write($"Number of comments:");
+            if (video.CommentNumberLength(_comments) == 3)
+            {
+                Console.WriteLine($"{video.CommentNumberLength(_comments)}");
+            }
+            
+            // below should return the set of specific comments for each video
+            foreach (Comment comment in _comments)
+                {
+                    comment.ReturnComment();
+                }
         }
     }
 }
