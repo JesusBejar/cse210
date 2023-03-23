@@ -1,18 +1,26 @@
 public class Customer
 {
     private string _name ;
-    private Address _address ;
+    private bool _address ;
+    Address A = new Address();
 
     public Customer()
     {
 
     }
-    public bool CountryIsUSA()
+    public bool CountryIsUSA(string country)
     {
-        return true;
+        if (country == "USA")
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
     }
     public string ReturnCustomer()
     {
-        return "";
+        return $"{_name} {_address}";
     }
 }

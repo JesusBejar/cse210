@@ -8,17 +8,16 @@ public class Address
     {
 
     }
-    public bool CountryIsUSA()
+    public string CountryIsUSA()
     {
         if (_country == "USA" || _country == "United States of America")
         {
-            return true;
+            return $"USA";
         }
         else 
         {
-            return false;
+            return $"{_country}";
         }
-
     }
     public string ReturnAddress()
     {
