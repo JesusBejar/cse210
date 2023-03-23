@@ -11,7 +11,7 @@ public class Product
     }
     public string ReturnProduct()
     {
-        return $"{_name} {_id} {TotalProductPrice()}";
+        return $"{_name} {_id}";
     }
 
     public int TotalProductPrice()
