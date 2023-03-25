@@ -4,8 +4,6 @@ public class Product
     private string _id ;
     private int _quantity ;
     private int _price ;
-    private int _totalPrice ;
-
     public Product (string name, string id, int quantity, int price)
     {
         _name = name;
