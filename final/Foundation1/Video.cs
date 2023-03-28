@@ -13,11 +13,11 @@ public class Video
 
     public int CommentNumberLength(List<Comment> comments)
     {
+        _counter = 0;
         foreach (Comment comment in comments)
         {
             _counter += 1;
         }
-        Console.WriteLine($"Number of comments: {_counter}");
         return _counter;
     }
 
