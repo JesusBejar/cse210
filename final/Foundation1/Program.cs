@@ -83,9 +83,13 @@ class Program
             Console.Write($"Number of comments:");
             
             count++;
+            // the following conditionals determine and display respective comments
+            // with their videos using a counter
             if(count==1)
             {
+                // below returns # of comments
                 Console.WriteLine(video.CommentNumberLength(_biggerCommentList)/3);
+                // below is code to return names and texts of all comments
                 Console.WriteLine(_biggerCommentList[0]._name);
                 Console.WriteLine(_biggerCommentList[0]._text);
                 Console.WriteLine(_biggerCommentList[1]._name);
@@ -95,7 +99,9 @@ class Program
             }
             else if (count==2)
             {
+                // below returns # of comments
                 Console.WriteLine(video.CommentNumberLength(_biggerCommentList)/3);
+                // below is code to return names and texts of all comments
                 Console.WriteLine(_biggerCommentList[3]._name);
                 Console.WriteLine(_biggerCommentList[3]._text);
                 Console.WriteLine(_biggerCommentList[4]._name);
@@ -105,7 +111,9 @@ class Program
             }
             else
             {
+                // below returns # of comments
                 Console.WriteLine(video.CommentNumberLength(_biggerCommentList)/3);
+                // below is code to return names and texts of all comments
                 Console.WriteLine(_biggerCommentList[6]._name);
                 Console.WriteLine(_biggerCommentList[6]._text);
                 Console.WriteLine(_biggerCommentList[7]._name);
@@ -113,7 +121,7 @@ class Program
                 Console.WriteLine(_biggerCommentList[8]._name);
                 Console.WriteLine(_biggerCommentList[8]._text);
             }
-
+            // FINISHED
         }
     }
 }
