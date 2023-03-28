@@ -15,9 +15,7 @@ class Program
         video1._length = "840 seconds\n";
         _videoList.Add(video1);
 
-        // 3 COMMENTS 
-        List<Comment> _comments1 = new List<Comment>();
-        
+        // 3 COMMENTS         
         Comment c1 = new Comment();
         c1._name = "@DrBeauHightower";
         c1._text = "What a time to be alive. Probably the most excited me and my friends had ever been for a fight, but especially the pre fight trash talk. Iconic.";
@@ -40,7 +38,6 @@ class Program
         _videoList.Add(video2);
 
         // 3 COMMENTS 
-        List<Comment> _comments2 = new List<Comment>();
         Comment c4 = new Comment();
         c4._name = "@lightagainst_darkness6697";
         c4._text = "Thanks man you helped me a lot";
@@ -64,7 +61,6 @@ class Program
         _videoList.Add(video3);
 
         // 3 COMMENTS
-        List<Comment> _comments3 = new List<Comment>();
         Comment c7 = new Comment();
         c7._name = "@peggygallagher@5802";
         c7._text = "Thank you Lord Jesus for picking me up every time I fall...";
