@@ -10,4 +10,18 @@ class Event
     private string _date ;
     private string _time ;
     private Address _address ;
+
+
+    public string DisplayStandardDetails()
+    {
+        return "";
+    }
+    public string DisplayFullDetails()
+    {
+        return "";
+    }
+    public string DisplayFewDetails()
+    {
+        return "";
+    }
 }
