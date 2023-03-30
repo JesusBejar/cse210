@@ -1,8 +1,8 @@
 public class Reception : Event
 {
-    public Reception(string rsvpEmail)
+    public Reception(string title, string description, string date, string time, Address address) : base (title, description, date, time, address)
     {
-        _rsvpEmail = rsvpEmail;
+        
     }
     private string _rsvpEmail ;
 }

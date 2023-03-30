@@ -1,9 +1,8 @@
-public class Leture : Event
+public class Lecture : Event
 {
-    public Lecture(string speakerName, int capacity)
+    public Lecture(string title, string description, string date, string time, Address address) : base (title, description, date, time, address)
     {
-        _speakerName = speakerName;
-        _capacity = capacity;
+
     }
     private string _speakerName ;
     private int _capacity ;
