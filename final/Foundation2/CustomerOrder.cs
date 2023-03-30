@@ -11,24 +11,26 @@ public class CustomerOrder
         _totalOrderPrice = totalOrderPrice;
         _address = address;
     }
-    public void CalculateCost()
+    public void CalculateCost(List<Product> productList)
     {
+        _totalOrderPrice = 0;
         foreach (Product p in _productList)
         {
-
+            _totalOrderPrice += p.TotalProductPrice();
         }
+        Console.WriteLine(_totalOrderPrice);
     }
     public void PackingLabel()
     {
-        Console.WriteLine("Packing label: \n");
+        Console.WriteLine("Packing label:");
         foreach (Product p in _productList)
         {
-            Console.WriteLine($" {p.ReturnProduct()} ");
+            Console.WriteLine($"{p.ReturnProduct()} ");
         }
     }
     public void ShippingLabel()
     {
-        Console.WriteLine($"Shipping label: \n {_customer.ReturnCustomer()}");
+        Console.WriteLine($"Shipping label:\n{_customer.ReturnCustomer()}");
     }
 
 }
