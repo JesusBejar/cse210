@@ -11,14 +11,15 @@ public class CustomerOrder
         _totalOrderPrice = totalOrderPrice;
         _address = address;
     }
-    public void CalculateCost(List<Product> productList)
+    public int CalculateCost(List<Product> productList)
     {
-        _totalOrderPrice = 0;
+        // _totalOrderPrice = 0;
         foreach (Product p in _productList)
         {
             _totalOrderPrice += p.TotalProductPrice();
         }
-        Console.WriteLine(_totalOrderPrice);
+        Console.WriteLine($" Total cost - ${_totalOrderPrice}");
+        return _totalOrderPrice;
     }
     public void PackingLabel()
     {
@@ -27,6 +28,7 @@ public class CustomerOrder
         {
             Console.WriteLine($"{p.ReturnProduct()} ");
         }
+        _productList.Clear();
     }
     public void ShippingLabel()
     {
