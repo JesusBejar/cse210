@@ -5,4 +5,13 @@ public class Reception : Event
         
     }
     private string _rsvpEmail ;
+
+    public string eventType ()
+    {
+        return "Reception";
+    }
+    public string eventInfo()
+    {
+        return $"{_rsvpEmail}";
+    }
 }

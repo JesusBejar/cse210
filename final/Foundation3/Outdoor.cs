@@ -5,4 +5,13 @@ public class Outdoor : Event
         
     }
     private string _weatherStatement ;
+
+    public string eventType ()
+    {
+        return "Outdoor";
+    }
+    public string eventInfo()
+    {
+        return $"{_weatherStatement}";
+    }
 }

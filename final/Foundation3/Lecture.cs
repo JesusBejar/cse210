@@ -6,4 +6,13 @@ public class Lecture : Event
     }
     private string _speakerName ;
     private int _capacity ;
+
+    public string eventType ()
+    {
+        return "Lecture";
+    }
+    public string eventInfo()
+    {
+        return $"{_speakerName} {_capacity}";
+    }
 }
