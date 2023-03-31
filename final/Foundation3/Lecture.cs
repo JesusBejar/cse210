@@ -11,8 +11,4 @@ public class Lecture : Event
     {
         return "Lecture";
     }
-    public string eventInfo()
-    {
-        return $"{_speakerName} {_capacity}";
-    }
 }

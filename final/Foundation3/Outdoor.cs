@@ -10,8 +10,4 @@ public class Outdoor : Event
     {
         return "Outdoor";
     }
-    public string eventInfo()
-    {
-        return $"{_weatherStatement}";
-    }
 }
