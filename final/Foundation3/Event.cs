@@ -1,12 +1,13 @@
 public class Event
 {
-    public Event(string title, string description, string date, string time, Address address)
+    public Event(string title, string description, string date, string time, Address address, string eventType)
     {
         _title = title;
         _description = description;
         _date = date;
         _time = time;
         _address = address;
+        _eventType = eventType;
     }
 
     private string _title ;
@@ -14,20 +15,24 @@ public class Event
     private string _date ;
     private string _time ;
     private Address _address ;
+    private string _eventType ; 
 
     // Standard details - Lists the title, description, date, time, and address.
     // Full details - Lists all of the above, plus type of event and information specific to that event type. For lectures, this includes the speaker name and capacity. For receptions this includes an email for RSVP. For outdoor gatherings, this includes a statement of the weather.
     // Short description - Lists the type of event, title, and the date.
-    public string DisplayStandardDetails()
+    public void DisplayStandardDetails()
     {
-        return $"{_title} {_description} {_date} {_time} {_address}";
+        Console.WriteLine("Standard Details");
+        Console.WriteLine($"\n{_title} {_description} {_date} {_time} {_address.ReturnAddress()}");
     }
-    public string DisplayFullDetails()
+    public void DisplayFullDetails(string eventType)
     {
-        return $"{_title} {_description} {_date} {_time} {_address}";
+        Console.WriteLine("Full Details");
+        Console.WriteLine($"\nEvent type : {_eventType} \n{_title} {_description} {_date} {_time} {_address.ReturnAddress()}");
     }
-    public string DisplayFewDetails()
+    public void DisplayFewDetails()
     {
-        return $"{_title} {_description} {_date}";
+        Console.WriteLine("Few Details");
+        Console.WriteLine($"\n{_title} {_description} {_date}");
     }
 }
