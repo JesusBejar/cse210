@@ -5,4 +5,5 @@ public abstract class Activity
     private int _counter ;
     private List<Activity> _activityList ;
 
+    public abstract string DistanceCalculation();
 }
