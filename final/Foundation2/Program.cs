@@ -9,31 +9,22 @@ class Program
         Address a1 = new Address("3901 Candy st", "Monterrey", "Mexico");
         // Console.WriteLine(a1.ReturnAddress());
         // Console.WriteLine(a1.CountryIsUSA());
-        // prints the following
-        // 3901 Candy st Utah United States of America
-        // USA
 
         Customer c1 = new Customer("Jacob Bejar", a1);
         // Console.WriteLine(c1.ReturnCustomer());
-        // prints the following
-        // Elend Musk 3901 Candy st Utah United States of America
 
         // PRODUCTS 1 ------------------------------
         Product bonobosPoloShirt = new Product("Soft Air Sweather Polo", "BF-104058010-UBUO", 3, 109);
+        _productList1.Add(bonobosPoloShirt);
         // Console.WriteLine(bonobosPoloShirt.ReturnProduct());
         // Console.WriteLine($"Total cost: {bonobosPoloShirt.TotalProductPrice()}");
-        _productList1.Add(bonobosPoloShirt);
-        // prints the following
-        // Soft Air Sweather Polo SKU: BF-104058010-UBUO
-        // Total cost: 327
-
+        
         Product championSweats = new Product("Closed Bottom Everyday Cotton pants 31.5", "P7310-407Q88", 2, 27);
+        _productList1.Add(championSweats);
         // Console.WriteLine(championSweats.ReturnProduct());
         // Console.WriteLine($"Total cost: {championSweats.TotalProductPrice()}");
-        _productList1.Add(championSweats);
-        // prints the following
-        // CLOSED BOTTOM EVERYDAY COTTON PANTS, 31.5 Style# P7310-407Q88
-        // Total cost: 54
+        Product jesusTShirt = new Product("On Earth Premium sand tee","5521", 2, 10);
+        _productList1.Add(jesusTShirt);
 
         // CUSTOMER ORDER 1 ------------------------------
         CustomerOrder o1 = new CustomerOrder(_productList1, c1, a1);
@@ -56,16 +47,14 @@ class Program
         _productList2.Add(rubberStick);
         Product dogKibble = new Product("Taste of the Wild Dog Kibble", "154549", 1, 56);
         _productList2.Add(dogKibble);
+        Product puppyMilkReplacer = new Product("Breeder's Edge® Foster Care™ Canine Milk Replacer", "63263-209", 1, 20);
+        _productList2.Add(puppyMilkReplacer);
 
         // CUSTOMER ORDER 2 ------------------------------
         CustomerOrder o2 = new CustomerOrder(_productList2, c2, a2);
-        // below will print out the name and product id of each product in the order
         Console.WriteLine("\nOrder #2 -");
         o2.PackingLabel();
         o2.ShippingLabel();
-        // the a2.CountryIsUSA determines if the user address is in the USA and returns a country string
-        // the c2.CountryIsUSA then takes the country string and determines if it is USA or not and returns true or false
-        // the o2.CalculateCost takes the true or false and adds either 5$ or 35$ to the total cost
         o2.CalculateCost(c2.CountryIsUSA(a2.CountryIsUSA()));
     }
 }
