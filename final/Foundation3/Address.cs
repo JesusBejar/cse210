@@ -10,4 +10,9 @@ public class Address
     private string _state ;
     private string _country ;
 
+    public string ReturnAddress()
+    {
+        return $"{_street} {_state} {_country}";
+    }
+
 }
