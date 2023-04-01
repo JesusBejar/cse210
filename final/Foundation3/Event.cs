@@ -22,17 +22,17 @@ public class Event
     // Short description - Lists the type of event, title, and the date.
     public void DisplayStandardDetails()
     {
-        Console.WriteLine("Standard Details");
-        Console.WriteLine($"\n{_title} {_description} {_date} {_time} {_address.ReturnAddress()}");
+        Console.WriteLine("\nStandard Details:");
+        Console.WriteLine($"{_title} {_description} {_date} {_time} {_address.ReturnAddress()}");
     }
     public void DisplayFullDetails(string eventType)
     {
-        Console.WriteLine("Full Details");
-        Console.WriteLine($"\nEvent type : {_eventType} \n{_title} {_description} {_date} {_time} {_address.ReturnAddress()}");
+        Console.WriteLine("\nFull Details:");
+        Console.WriteLine($"Event type : {_eventType} \n{_title} {_description} {_date} {_time} {_address.ReturnAddress()}");
     }
-    public void DisplayFewDetails()
+    public void DisplayFewDetails(string eventType)
     {
-        Console.WriteLine("Few Details");
-        Console.WriteLine($"\n{_title} {_description} {_date}");
+        Console.WriteLine("\nFew Details:");
+        Console.WriteLine($"{_eventType} {_title} {_date}");
     }
 }
