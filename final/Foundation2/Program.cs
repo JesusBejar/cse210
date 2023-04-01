@@ -56,5 +56,7 @@ class Program
         o2.PackingLabel();
         o2.ShippingLabel();
         o2.CalculateCost(c2.CountryIsUSA(a2.CountryIsUSA()));
+
+        // finished
     }
 }
