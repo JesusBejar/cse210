@@ -25,7 +25,7 @@ public class Event
     public void DisplayStandardDetails()
     {
         Console.WriteLine("\nStandard Details:");
-        Console.WriteLine($"{_title} {_description} {_date} {_time} {_address.ReturnAddress()}");
+        Console.WriteLine($"{_title} \n{_description} \n{_date} \n{_time} {_address.ReturnAddress()}");
     }
     public void DisplayFullDetails(string eventType, string eventInfo)
     {
