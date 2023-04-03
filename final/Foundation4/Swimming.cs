@@ -7,14 +7,17 @@ public class Swimming : Activity
     }
     public override int DistanceCalculation()
     {
-        return ((_numOfLaps) * 50 / 1000);
+        // Distance (km) = swimming laps * 50 / 1000
+        return (((_numOfLaps) * 50) / 1000);
     }
     public override int SpeedCalculation()
     {
-        return (_length / ((_numOfLaps) * 50 / 1000) * 60);
+        // Speed (mph or kph) = (distance / minutes) * 60
+        return ((((_numOfLaps) * 50 / 1000) / _length) * 60);
     }
     public override int PaceCalculation()
     {
+        // Pace (min per mile or min per km)= minutes / distance
         return _length * ((_numOfLaps) * 50 / 1000);
     }
 }

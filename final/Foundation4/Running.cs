@@ -9,13 +9,14 @@ public class Running : Activity
     {
         return _distance;
     }
-    // (distance / minutes) * 60
+    // Speed (mph or kph) = (distance / minutes) * 60
     public override int SpeedCalculation()
     {
         return ((_distance / _length) * 60);
     }
     public override int PaceCalculation()
     {
+        // Pace (min per mile or min per km)= minutes / distance
         return (_length / _distance);
     }
 }

@@ -7,15 +7,16 @@ public class Biking : Activity
     }
     public override int DistanceCalculation()
     {
+        // (speed * minutes) * 60
         return ((_speed * _length) / 60);
     }
-    // (distance / minutes) * 60
     public override int SpeedCalculation()
     {
         return _speed;
     }
     public override int PaceCalculation()
     {
+        // Pace (min per mile or min per km)= minutes / distance
         return (_length / ((_speed * _length)));
     }
 }
