@@ -1,10 +1,9 @@
 public abstract class Activity
 {
-    public Activity (string date, int length, int counter)
+    public Activity (string date, int length)
     {
         _date = date;
         _length = length;
-        _counter = counter;
     }
     protected string _date ; 
     protected double _length ;

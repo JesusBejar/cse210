@@ -7,13 +7,13 @@ class Program
         List<Activity> _activityList = new List<Activity>();
 
         // Date, length of activity in minutes, distance of activity in km
-        Running tenMinuteRun = new Running("Monday, April 3rd", 10, 1, 5);
+        Running tenMinuteRun = new Running("Monday, April 3rd", 10, 5);
         _activityList.Add(tenMinuteRun);
 
-        Biking hourLongRide = new Biking("Monday, April 4th", 60, 1, 15);
+        Biking hourLongRide = new Biking("Monday, April 4th", 60, 15);
         _activityList.Add(hourLongRide);
 
-        Swimming thirtyMinuteSwim = new Swimming("Tuesday, April 5th", 30, 1, 50);
+        Swimming thirtyMinuteSwim = new Swimming("Tuesday, April 5th", 30, 50);
         _activityList.Add(thirtyMinuteSwim);
         Console.Clear();
         foreach (Activity activity in _activityList)
