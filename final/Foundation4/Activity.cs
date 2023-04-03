@@ -1,13 +1,13 @@
 public abstract class Activity
 {
-    public Activity (string date, string length, int counter)
+    public Activity (string date, int length, int counter)
     {
         _date = date;
         _length = length;
         _counter = counter;
     }
     protected string _date ; 
-    protected string _length ;
+    protected int _length ;
     protected int _counter ;
     public abstract int DistanceCalculation();
     public abstract string SpeedCalculation();

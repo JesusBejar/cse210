@@ -1,7 +1,7 @@
 public class Running : Activity
 {
     private int _distance ;
-    public Running (string date, string length, int counter, int distance) : base (date, length, counter)
+    public Running (string date, int length, int counter, int distance) : base (date, length, counter)
     {
         _distance = distance;
     }
@@ -12,8 +12,9 @@ public class Running : Activity
     // (distance / minutes) * 60
     public override string SpeedCalculation()
     {
-        // 60 / pace
-        return (((_distance / Int32.Parse(_length)) * 60).ToString());
+        Console.WriteLine(_distance);
+        Console.WriteLine(_length);
+        return (((_distance / _length) * 60).ToString());
     }
     public override string PaceCalculation()
     {
@@ -21,6 +22,6 @@ public class Running : Activity
         // converts strings to ints
         // makes the calculation
         // converts ints to strings and returns
-        return ((Int32.Parse(_length) * _distance).ToString());
+        return (_length / _distance).ToString();
     }
 }
