@@ -20,5 +20,6 @@ class Program
         {
             activity.GetSummary(activity.ActivityType(), activity.DistanceCalculation(), activity.SpeedCalculation(), activity.PaceCalculation());
         }
+        // finished
     }
 }

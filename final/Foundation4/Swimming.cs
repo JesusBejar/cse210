@@ -18,7 +18,7 @@ public class Swimming : Activity
     public override double PaceCalculation()
     {
         // Pace (min per mile or min per km)= minutes / distance
-        return _length * ((_numOfLaps) * 50 / 1000);
+        return (_length / ((_numOfLaps) * 50 / 1000));
     }
     public override string ActivityType()
     {
