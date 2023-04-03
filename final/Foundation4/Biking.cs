@@ -1,24 +1,25 @@
 public class Biking : Activity
 {
-    private string _speed ;
-    public Biking (string date, string length, int counter, string speed) : base (date, length, counter)
+    private int _speed ;
+    public Biking (string date, int length, int counter, int speed) : base (date, length, counter)
     {
         _speed = speed;
     }
-    public override string DistanceCalculation()
+    public override int DistanceCalculation()
     {
-        return "";
+        return ((_speed * _length) / 60);
     }
-    public override string SpeedCalculation()
+    // (distance / minutes) * 60
+    public override int SpeedCalculation()
     {
-        return "";
+        return _speed;
     }
-    public override string PaceCalculation(string length, string distance)
+    public override int PaceCalculation()
     {
         // passes in length and distance
         // converts strings to ints
         // makes the calculation
         // converts ints to strings and returns
-        return ((Int32.Parse(length) * Int32.Parse(distance)).ToString());
+        return (_length / ((_speed * _length)));
     }
 }
