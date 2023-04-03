@@ -7,14 +7,21 @@ public class Swimming : Activity
     }
     public override string DistanceCalculation()
     {
-        return "";
+        // converts _numOfLaps string to int
+        // makes the calculation
+        // converts int to string and returns
+        return (Int32.Parse(_numOfLaps) * 50 / 1000).ToString();
     }
     public override string SpeedCalculation()
     {
         return "";
     }
-    public override string PaceCalculation()
+    public override string PaceCalculation(string length, string distance)
     {
-        return "";
+        // passes in length and distance
+        // converts strings to ints
+        // makes the calculation
+        // converts ints to strings and returns
+        return ((Int32.Parse(length) * Int32.Parse(distance)).ToString());
     }
 }

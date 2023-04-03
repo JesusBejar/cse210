@@ -7,14 +7,18 @@ public class Running : Activity
     }
     public override string DistanceCalculation()
     {
-        return "";
+        return $"{_distance} km";
     }
     public override string SpeedCalculation()
     {
         return "";
     }
-    public override string PaceCalculation()
+    public override string PaceCalculation(string length, string distance)
     {
-        return "";
+        // passes in length and distance
+        // converts strings to ints
+        // makes the calculation
+        // converts ints to strings and returns
+        return ((Int32.Parse(length) * Int32.Parse(distance)).ToString());
     }
 }
