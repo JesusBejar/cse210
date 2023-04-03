@@ -19,4 +19,8 @@ public class Biking : Activity
         // Pace (min per mile or min per km)= minutes / distance
         return (_length / ((_speed * _length)));
     }
+    public override string ActivityType()
+    {
+        return "Biking";
+    }
 }

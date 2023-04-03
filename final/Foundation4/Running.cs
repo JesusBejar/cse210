@@ -19,4 +19,8 @@ public class Running : Activity
         // Pace (min per mile or min per km)= minutes / distance
         return (_length / _distance);
     }
+    public override string ActivityType()
+    {
+        return "Running";
+    }
 }

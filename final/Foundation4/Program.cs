@@ -18,15 +18,15 @@ class Program
         hourLongRide.PaceCalculation();
         _activityList.Add(hourLongRide);
 
-        Swimming thirtyMinutes = new Swimming("Tuesday, April 5ht", 30, 1, 10);
-        thirtyMinutes.DistanceCalculation();
-        thirtyMinutes.SpeedCalculation();
-        thirtyMinutes.PaceCalculation();
-        _activityList.Add(thirtyMinutes);
+        Swimming thirtyMinuteSwim = new Swimming("Tuesday, April 5th", 30, 1, 50);
+        thirtyMinuteSwim.DistanceCalculation();
+        thirtyMinuteSwim.SpeedCalculation();
+        thirtyMinuteSwim.PaceCalculation();
+        _activityList.Add(thirtyMinuteSwim);
 
         foreach (Activity activity in _activityList)
         {
-            activity.GetSummary(activity.DistanceCalculation(), activity.SpeedCalculation(), activity.PaceCalculation());
+            activity.GetSummary(activity.ActivityType(), activity.DistanceCalculation(), activity.SpeedCalculation(), activity.PaceCalculation());
         }
     }
 }
