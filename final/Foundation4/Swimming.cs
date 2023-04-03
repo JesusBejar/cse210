@@ -7,9 +7,6 @@ public class Swimming : Activity
     }
     public override int DistanceCalculation()
     {
-        // converts _numOfLaps string to int
-        // makes the calculation
-        // converts int to string and returns
         return ((_numOfLaps) * 50 / 1000);
     }
     public override int SpeedCalculation()
@@ -18,10 +15,6 @@ public class Swimming : Activity
     }
     public override int PaceCalculation()
     {
-        // passes in length and distance
-        // converts strings to ints
-        // makes the calculation
-        // converts ints to strings and returns
         return _length * ((_numOfLaps) * 50 / 1000);
     }
 }

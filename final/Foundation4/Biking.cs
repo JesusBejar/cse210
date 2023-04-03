@@ -16,10 +16,6 @@ public class Biking : Activity
     }
     public override int PaceCalculation()
     {
-        // passes in length and distance
-        // converts strings to ints
-        // makes the calculation
-        // converts ints to strings and returns
         return (_length / ((_speed * _length)));
     }
 }
