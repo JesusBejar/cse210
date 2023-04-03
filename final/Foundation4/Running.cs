@@ -10,18 +10,16 @@ public class Running : Activity
         return _distance;
     }
     // (distance / minutes) * 60
-    public override string SpeedCalculation()
+    public override int SpeedCalculation()
     {
-        Console.WriteLine(_distance);
-        Console.WriteLine(_length);
-        return (((_distance / _length) * 60).ToString());
+        return ((_distance / _length) * 60);
     }
-    public override string PaceCalculation()
+    public override int PaceCalculation()
     {
         // passes in length and distance
         // converts strings to ints
         // makes the calculation
         // converts ints to strings and returns
-        return (_length / _distance).ToString();
+        return (_length / _distance);
     }
 }
