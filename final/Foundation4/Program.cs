@@ -23,7 +23,7 @@ class Program
         thirtyMinuteSwim.SpeedCalculation();
         thirtyMinuteSwim.PaceCalculation();
         _activityList.Add(thirtyMinuteSwim);
-
+        Console.Clear();
         foreach (Activity activity in _activityList)
         {
             activity.GetSummary(activity.ActivityType(), activity.DistanceCalculation(), activity.SpeedCalculation(), activity.PaceCalculation());
