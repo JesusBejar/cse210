@@ -1,7 +1,7 @@
 public class Biking : Activity
 {
     private string _speed ;
-    public Biking (string date, string length, int counter, List<Activity> activityList, string speed) : base (date, length, counter, activityList)
+    public Biking (string date, string length, int counter, string speed) : base (date, length, counter)
     {
         _speed = speed;
     }

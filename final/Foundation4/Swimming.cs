@@ -1,7 +1,7 @@
 public class Swimming : Activity
 {
     private string _numOfLaps ;
-    public Swimming (string date, string length, int counter, List<Activity> activityList, string numOfLaps) : base (date, length, counter, activityList)
+    public Swimming (string date, string length, int counter, string numOfLaps) : base (date, length, counter)
     {
         _numOfLaps = numOfLaps;
     }
