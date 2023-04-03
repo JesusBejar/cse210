@@ -16,7 +16,6 @@ public class Biking : Activity
     }
     public override double PaceCalculation()
     {
-        // doesn't appear
         // Pace (min per mile or min per km)= minutes / distance
         return (_length / ((_speed * _length)));
     }
