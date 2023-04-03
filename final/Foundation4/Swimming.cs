@@ -1,27 +1,27 @@
 public class Swimming : Activity
 {
-    private string _numOfLaps ;
-    public Swimming (string date, string length, int counter, string numOfLaps) : base (date, length, counter)
+    private int _numOfLaps ;
+    public Swimming (string date, int length, int counter, int numOfLaps) : base (date, length, counter)
     {
         _numOfLaps = numOfLaps;
     }
-    public override string DistanceCalculation()
+    public override int DistanceCalculation()
     {
         // converts _numOfLaps string to int
         // makes the calculation
         // converts int to string and returns
-        return (Int32.Parse(_numOfLaps) * 50 / 1000).ToString();
+        return ((_numOfLaps) * 50 / 1000);
     }
-    public override string SpeedCalculation()
+    public override int SpeedCalculation()
     {
-        return "";
+        return (_length / ((_numOfLaps) * 50 / 1000) * 60);
     }
-    public override string PaceCalculation(string length, string distance)
+    public override int PaceCalculation()
     {
         // passes in length and distance
         // converts strings to ints
         // makes the calculation
         // converts ints to strings and returns
-        return ((Int32.Parse(length) * Int32.Parse(distance)).ToString());
+        return _length * ((_numOfLaps) * 50 / 1000);
     }
 }
