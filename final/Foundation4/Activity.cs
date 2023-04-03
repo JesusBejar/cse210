@@ -7,19 +7,19 @@ public abstract class Activity
         _counter = counter;
     }
     protected string _date ; 
-    protected int _length ;
+    protected double _length ;
     protected int _counter ;
     protected string _activityType ;
-    public abstract int DistanceCalculation();
-    public abstract int SpeedCalculation();
-    public abstract int PaceCalculation();
+    public abstract double DistanceCalculation();
+    public abstract double SpeedCalculation();
+    public abstract double PaceCalculation();
     public abstract string ActivityType();
 
     // 03 Nov 2022 Running (30 min)- Distance 3.0 miles, Speed 6.0 mph, Pace: 10.0 min per mile
     // make an abstract method for activity type
-    public string GetSummary(string activityType, int distance, int speed, int pace)
+    public string GetSummary(string activityType, double distance, double speed, double pace)
     {
-        Console.WriteLine($"Date: {_date} {activityType} ({_length} min) - Distance: {distance.ToString()}km Speed:{speed.ToString()}kph Pace:{pace.ToString()}min per km");
+        Console.WriteLine($"Date: {_date} Activity Type: {activityType} ({_length} min) - Distance: {distance.ToString()}km Speed: {speed.ToString()}kph Pace: {pace.ToString("F2")}min/km");
         return "";
     }
 }

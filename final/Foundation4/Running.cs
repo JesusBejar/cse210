@@ -5,16 +5,17 @@ public class Running : Activity
     {
         _distance = distance;
     }
-    public override int DistanceCalculation()
+    public override double DistanceCalculation()
     {
         return _distance;
     }
     // Speed (mph or kph) = (distance / minutes) * 60
-    public override int SpeedCalculation()
+    public override double SpeedCalculation()
     {
+        // doesn't appear
         return ((_distance / _length) * 60);
     }
-    public override int PaceCalculation()
+    public override double PaceCalculation()
     {
         // Pace (min per mile or min per km)= minutes / distance
         return (_length / _distance);
